@@ -1,0 +1,13 @@
+@(employees: List[Employee])
+
+@main("Welcome to Play") {
+  <h1>Employees</h1>
+  <ul>
+    @for(emp <- employees) {
+    <li>id: @emp.id</li>
+    <li>name: @emp.name</li>
+    <li>designation: @emp.designation</li>
+    <br />
+    }
+  </ul>
+}
