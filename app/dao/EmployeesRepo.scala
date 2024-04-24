@@ -1,6 +1,7 @@
-package controllers
+package dao
 
-import controllers.Employee.toEmployee
+import models.{Employee, EmployeeForm}
+import models.Employee.toEmployee
 import scalikejdbc._
 import scalikejdbc.config._
 
@@ -19,8 +20,8 @@ class EmployeesRepo {
 //      .map(rs => Employee(rs.int("id"), rs.string("name"), rs.string("designation")))
 //      .single.apply()
 //  }
-//  def insertEmployee(form: EmployeeForm): Unit = {
-//    sql"insert into employees(name, designation) values(${form.name}, ${form.designation})".update.apply()
-//  }
+  def insertEmployee(form: EmployeeForm): Unit = {
+    sql"insert into employees(name, designation) values(${form.name}, ${form.designation})".update.apply()
+  }
 }
 

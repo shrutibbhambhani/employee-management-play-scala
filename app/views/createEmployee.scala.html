@@ -1,0 +1,15 @@
+@(empForm: Form[EmployeeForm])(implicit messages: Messages)
+
+@import helper._
+
+@main("Add a new Employee") {
+
+  <h1>Add a new Employee</h1>
+
+  @form(routes.EmployeeController.createEmployee) {
+    @inputText(empForm("Name"))
+    @inputText(empForm("Designation"))
+    <button type="submit">Save</button>
+  }
+
+}

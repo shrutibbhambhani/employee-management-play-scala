@@ -1,13 +1,14 @@
 @(employees: List[Employee])
 
-@main("Welcome to Play") {
+@main("Welcome to Employee Management portal") {
   <h1>Employees</h1>
   <ul>
     @for(emp <- employees) {
-    <li>id: @emp.id</li>
-    <li>name: @emp.name</li>
-    <li>designation: @emp.designation</li>
-    <br />
+      <li>id: @emp.id</li>
+      <li>name: @emp.name</li>
+      <li>designation: @emp.designation</li>
+      <br />
     }
   </ul>
+  <a href="@routes.EmployeeController.createEmployeeInit">Add a new employee</a>
 }
