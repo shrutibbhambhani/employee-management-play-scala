@@ -1,0 +1,16 @@
+@(empForm: Form[UpdateEmployeeForm])(implicit messages: Messages)
+
+@import helper._
+
+@main("Update an Employee") {
+
+  <h1>Update an Employee</h1>
+
+  @form(routes.EmployeeController.updateEmployee) {
+    @inputText(empForm("id"),'readonly -> "readonly")
+    @inputText(empForm("Name"))
+    @inputText(empForm("Designation"))
+    <button type="submit">Save</button>
+  }
+
+}

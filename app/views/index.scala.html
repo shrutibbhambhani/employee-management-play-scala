@@ -7,6 +7,9 @@
       <li>id: @emp.id</li>
       <li>name: @emp.name</li>
       <li>designation: @emp.designation</li>
+      <a href="@routes.EmployeeController.deleteEmployee(emp.id)">Delete employee</a>
+      <a href="@routes.EmployeeController.updateEmployeeInit(emp.id, emp.name, emp.designation)">Update employee</a>
+      <br />
       <br />
     }
   </ul>
